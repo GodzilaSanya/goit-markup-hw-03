@@ -1,0 +1,200 @@
+/* палітра */
+/* main text color #212121 */
+/* second text color #757575 */
+/* focus text color #2196F3 */
+/* second background-color #F5F4FA */
+:root {
+  --headlines-color: #212121;
+  --second-text-color: #757575;
+  --bg-color-section: #f5f4fa;
+  --bg-color-main: #ffffff;
+  --bg-color-second: #e5e5e5;
+  --focus-color: #2196f3;
+  --footer-hero-color: #2f303a;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.71;
+
+  background-color: var(--bg-color-main);
+  color: var(--second-text-color);
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+/* current page */
+.site-nav .link.current {
+  color: var(--focus-color);
+}
+/* current button */
+.filter-button.current-btn {
+  background-color: var(--focus-color);
+  color: var(--bg-color-main);
+}
+/* LOGO */
+.logo,
+.logo-blue {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  color: #000000;
+}
+.logo-blue {
+  color: var(--focus-color);
+}
+/* LOGO FOOTER */
+.footer .logo.link {
+  color: var(--bg-color-main);
+}
+/* NAVIGATION */
+.site-nav .link {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: var(--headlines-color);
+}
+
+.auth-nav .link {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: var(--second-text-color);
+}
+.auth-nav .link:hover,
+.auth-nav .link:focus,
+.site-nav .link:hover,
+.site-nav .link:focus,
+/* footer hover */
+.contacts .link:hover,
+.contacts .link:focus,
+.contacts .location.link:hover,
+.contacts .location.link:focus {
+  color: var(--focus-color);
+}
+/* HERO */
+.hero {
+  background-color: var(--footer-hero-color);
+}
+.hero-headlines {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: var(--bg-color-main);
+}
+/* Button hero */
+.button {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+
+  background-color: var(--focus-color);
+  color: var(--bg-color-main);
+  cursor: pointer;
+}
+.button:hover,
+.button:focus {
+  background-color: #188ce8;
+}
+/* Section headlines */
+.section-headlines,
+.examples-headlines {
+  color: var(--headlines-color);
+}
+/* specifics */
+.specifics {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+/* Чем мы занимаемся */
+h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+/* Наша команда */
+.team {
+  background-color: var(--bg-color-section);
+}
+.team-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+}
+.team-spec {
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--footer-hero-color);
+}
+.contacts .location.link {
+  color: var(--bg-color-main);
+}
+.contacts .link {
+  font-style: normal;
+  color: var(--second-text-color);
+}
+.footer .link {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* CSS PORTFOLIO */
+.filter-button {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+
+  cursor: pointer;
+
+  background-color: var(--bg-color-section);
+  color: var(--headlines-color);
+}
+.filter-button:hover,
+.filter-button:focus {
+  background-color: var(--focus-color);
+  color: var(--bg-color-main);
+}
+
+.examples h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.examples .desc {
+  font-size: 16px;
+  line-height: 1.88;
+
+  color: var(--second-text-color);
+}

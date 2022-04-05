@@ -23,21 +23,35 @@ body {
   color: var(--second-text-color);
 }
 .list {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 .link {
   text-decoration: none;
 }
-/* current page */
+/*------------- current page ----------------------------------------------*/
 .site-nav .link.current {
   color: var(--focus-color);
 }
-/* current button */
+/*------------- current button -------------------------------------------*/
 .filter-button.current-btn {
   background-color: var(--focus-color);
   color: var(--bg-color-main);
 }
-/* LOGO */
+/*--------------------------------HEADER------------------------------------ */
+.conteiner {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  width: 1200px;
+  outline: 2px solid tomato;
+}
+.page-header {
+  background-color: #ccc;
+}
 .logo,
 .logo-blue {
   font-family: Raleway;
@@ -50,11 +64,8 @@ body {
 .logo-blue {
   color: var(--focus-color);
 }
-/* LOGO FOOTER */
-.footer .logo.link {
-  color: var(--bg-color-main);
-}
-/* NAVIGATION */
+
+/*---------------- NAVIGATION ----------------------------------------*/
 .site-nav .link {
   font-family: Roboto;
   font-weight: 500;
@@ -85,7 +96,7 @@ body {
 .contacts .location.link:focus {
   color: var(--focus-color);
 }
-/* HERO */
+/*-------------------------------- HERO------------------------------------ */
 .hero {
   background-color: var(--footer-hero-color);
 }
@@ -98,8 +109,11 @@ body {
   text-transform: uppercase;
 
   color: var(--bg-color-main);
+
+  margin-top: 0;
+  margin-bottom: 30px;
 }
-/* Button hero */
+/* ----------------Button hero ----------------------------------*/
 .button {
   font-family: 'Roboto';
   font-weight: 700;
@@ -117,26 +131,49 @@ body {
 .button:focus {
   background-color: #188ce8;
 }
-/* Section headlines */
+/*--------------- Section headlines ------------------------------*/
 .section-headlines,
 .examples-headlines {
   color: var(--headlines-color);
+
+  margin-top: 0;
+  margin-bottom: 0;
 }
-/* specifics */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .specifics {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.4;
   text-transform: uppercase;
+
+  margin-bottom: 10px;
 }
-/* Чем мы занимаемся */
-h2 {
+
+.section-desc {
+  margin: 0;
+}
+/* --------------------Чем мы занимаемся -------------------------*/
+.title-work {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+
+  margin-bottom: 50px;
 }
-/* Наша команда */
+/* ----------------Team section -------------------------------*/
+.title-team {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  margin-bottom: 50px;
+}
 .team {
   background-color: var(--bg-color-section);
 }
@@ -150,9 +187,15 @@ h2 {
   font-size: 16px;
   line-height: 1.9;
   text-align: center;
+
+  margin: 0;
 }
 
-/* FOOTER */
+/*------------------------ FOOTER ----------------------------------*/
+/* --LOGO FOOTER-- */
+.footer .logo.link {
+  color: var(--bg-color-main);
+}
 .footer {
   background-color: var(--footer-hero-color);
 }
@@ -167,7 +210,7 @@ h2 {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* CSS PORTFOLIO */
+/*---------------- CSS PORTFOLIO -------------------------------------*/
 .filter-button {
   font-family: Roboto;
   font-weight: 500;

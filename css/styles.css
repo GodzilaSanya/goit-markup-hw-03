@@ -11,6 +11,7 @@
   --bg-color-second: #e5e5e5;
   --focus-color: #2196f3;
   --footer-hero-color: #2f303a;
+  --main-gap: 94px;
 }
 
 body {
@@ -40,6 +41,16 @@ body {
   color: var(--bg-color-main);
 }
 /*--------------------------------HEADER------------------------------------ */
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .conteiner {
   margin-left: auto;
   margin-right: auto;
@@ -49,8 +60,11 @@ body {
   width: 1200px;
   outline: 2px solid tomato;
 }
-.page-header {
-  background-color: #ccc;
+.logo {
+  display: block;
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 .logo,
 .logo-blue {
@@ -66,6 +80,13 @@ body {
 }
 
 /*---------------- NAVIGATION ----------------------------------------*/
+.nav-block {
+  display: flex;
+}
+.site-nav {
+  display: flex;
+}
+
 .site-nav .link {
   font-family: Roboto;
   font-weight: 500;
@@ -74,6 +95,25 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--headlines-color);
+
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+/* .site-nav .item:last-child {
+  margin-right: 0;
+} */
+
+.auth-nav {
+  display: flex;
+}
+
+.auth-nav .item + .item {
+  margin-left: 50px;
 }
 
 .auth-nav .link {
@@ -84,6 +124,10 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--second-text-color);
+
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .auth-nav .link:hover,
 .auth-nav .link:focus,
@@ -99,6 +143,8 @@ body {
 /*-------------------------------- HERO------------------------------------ */
 .hero {
   background-color: var(--footer-hero-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-headlines {
   font-weight: 900;
@@ -107,30 +153,55 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
   color: var(--bg-color-main);
+
+  max-width: 696px;
 
   margin-top: 0;
   margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
 }
-/* ----------------Button hero ----------------------------------*/
+/* --------Button hero ---------------------*/
 .button {
+  display: block;
+
   font-family: 'Roboto';
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-
   cursor: pointer;
-
   background-color: var(--focus-color);
   color: var(--bg-color-main);
-  cursor: pointer;
+  border: transparent;
+  border-radius: 4px;
+
+  min-width: 200px;
+  min-height: 50px;
+
+  padding: 10px 32px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .button:hover,
 .button:focus {
   background-color: #188ce8;
 }
+/* ---------------Hidden headlines----------------------------- */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 /*--------------- Section headlines ------------------------------*/
 .section-headlines,
 .examples-headlines {
@@ -140,8 +211,19 @@ body {
   margin-bottom: 0;
 }
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: var(--main-gap);
+  padding-bottom: var(--main-gap);
+}
+
+.features-list {
+  display: flex;
+
+  margin-bottom: var(--main-gap);
+}
+.features-item:not(:last-child) {
+  max-width: 270px;
+
+  margin-right: 30px;
 }
 
 .specifics {
@@ -165,7 +247,23 @@ body {
 
   margin-bottom: 50px;
 }
+
+.work-examples {
+  display: flex;
+}
+
+.work-examples-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.work-examples-pic {
+  display: block;
+}
 /* ----------------Team section -------------------------------*/
+.team {
+  background-color: var(--bg-color-section);
+}
+
 .title-team {
   font-weight: 700;
   font-size: 36px;
@@ -174,18 +272,40 @@ body {
 
   margin-bottom: 50px;
 }
-.team {
-  background-color: var(--bg-color-section);
+
+.team-list {
+  display: flex;
 }
+
+.team-item {
+  background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px;
+  width: 270px;
+
+  padding-bottom: 30px;
+}
+
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-item-pic {
+  display: block;
+  margin-bottom: 30px;
+}
+
 .team-name {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.18;
   text-align: center;
+
+  margin-bottom: 10px;
 }
+
 .team-spec {
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.18;
   text-align: center;
 
   margin: 0;
@@ -193,21 +313,30 @@ body {
 
 /*------------------------ FOOTER ----------------------------------*/
 /* --LOGO FOOTER-- */
-.footer .logo.link {
+.footer .logo {
   color: var(--bg-color-main);
+
+  padding-top: 0;
+  padding-bottom: 20px;
+  margin-right: 0;
 }
 .footer {
   background-color: var(--footer-hero-color);
+
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
+
+.address-item:not(:last-child) {
+  padding-bottom: 9px;
+}
+
 .contacts .location.link {
   color: var(--bg-color-main);
 }
 .contacts .link {
   font-style: normal;
   color: var(--second-text-color);
-}
-.footer .link {
-  color: rgba(255, 255, 255, 0.6);
 }
 
 /*---------------- CSS PORTFOLIO -------------------------------------*/
